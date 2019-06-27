@@ -7,7 +7,20 @@
 
 		<!-- Estilos CSS -->
 		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+
+		<!-- JQUERY -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		
+		<!-- SLIDER -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">	
+  		<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+		
+  		<!-- MOMENT JS -->
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+
+  		<!-- MIS SCRIPTS -->
+		<script type="text/javascript" src="js/main.js"></script>
 	</head>
 
 	<body>
@@ -33,29 +46,17 @@
 
 			<!-- SLIDER -->
 			<div id="slider">
-				
+				<div class="galeria">
+  					<div><img src="img/hojas.jpg" title="Hojas"></div>
+  					<div><img src="img/rojo.jpg" title="Rojo"></div>
+  					<div><img src="img/cielo.jpg" title="Cielo"></div>
+				</div>
 			</div>
 
 			<!-- CONTENIDO -->
 			<section id="content">
 				<div id="posts">
-					<article class="post">
-						<h2>Prueba de Titulo</h2>
-						<span class="date">Fecha de publicación</span>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur placerat nisi, quis congue tortor. Donec id volutpat augue, et facilisis augue. Pellentesque vitae tellus nisl. Sed vitae sem quis nunc hendrerit commodo. Cras efficitur gravida nisl ac laoreet. Donec pellentesque nibh et fringilla accumsan. Suspendisse at aliquam risus. Suspendisse dapibus pellentesque ex, vel tristique velit. Aliquam sodales, dolor condimentum lacinia lobortis, magna leo iaculis turpis, at congue ex risus tempus nisi. 
-						</p>
-						<a href="#" class="button-more">Leer más</a>
-					</article>	
-
-					<article class="post">
-						<h2>Prueba de Titulo</h2>
-						<span class="date">Fecha de publicación</span>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur placerat nisi, quis congue tortor. Donec id volutpat augue, et facilisis augue. Pellentesque vitae tellus nisl. Sed vitae sem quis nunc hendrerit commodo. Cras efficitur gravida nisl ac laoreet. Donec pellentesque nibh et fringilla accumsan. Suspendisse at aliquam risus. Suspendisse dapibus pellentesque ex, vel tristique velit. Aliquam sodales, dolor condimentum lacinia lobortis, magna leo iaculis turpis, at congue ex risus tempus nisi. 
-						</p>
-						<a href="#" class="button-more">Leer más</a>
-					</article>	
+					<!-- CARGAR POST DESDE JSON -->
 
 				</div>
 				<aside id="sidebar">
