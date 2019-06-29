@@ -57,15 +57,35 @@ $(document).ready(function(){
 
 	});
 
-/*
-	<article class="post">
-						<h2>Prueba de Titulo</h2>
-						<span class="date">Fecha de publicación</span>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur placerat nisi, quis congue tortor. Donec id volutpat augue, et facilisis augue. Pellentesque vitae tellus nisl. Sed vitae sem quis nunc hendrerit commodo. Cras efficitur gravida nisl ac laoreet. Donec pellentesque nibh et fringilla accumsan. Suspendisse at aliquam risus. Suspendisse dapibus pellentesque ex, vel tristique velit. Aliquam sodales, dolor condimentum lacinia lobortis, magna leo iaculis turpis, at congue ex risus tempus nisi. 
-						</p>
-						<a href="#" class="button-more">Leer más</a>
-					</article>	
-*/
+	// SELECTOR DE TEMAS
+	var theme = $("#theme");
+
+
+	$("#to-green").click(function(){
+
+		theme.attr("href","css/green.css");
+	});
+
+	$("#to-red").click(function(){
+		theme.attr("href","css/red.css");
+	});
+
+	$("#to-blue").click(function(){
+		theme.attr("href","css/blue.css");
+	});
+
+	// SCROLL PARA SUBIR AL PRINCIPIO DE LA PAGINA
+	$(".subir").click(function(e){
+		
+		e.preventDefault();
+		
+		$('html, body').animate({
+			scrollTop:0
+		}, 600);
+
+		return false;
+	});
+
+
 
 });
