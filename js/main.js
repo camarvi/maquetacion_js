@@ -2,6 +2,7 @@
 
 $(document).ready(function(){
 
+
 	// SLIDER
 
 	$('.galeria').bxSlider({
@@ -62,16 +63,18 @@ $(document).ready(function(){
 
 
 	$("#to-green").click(function(){
-
 		theme.attr("href","css/green.css");
+		localStorage.setItem("form_tema","green");
 	});
 
 	$("#to-red").click(function(){
 		theme.attr("href","css/red.css");
+		localStorage.setItem("form_tema","red");
 	});
 
 	$("#to-blue").click(function(){
 		theme.attr("href","css/blue.css");
+		localStorage.setItem("form_tema","blue");
 	});
 
 	// SCROLL PARA SUBIR AL PRINCIPIO DE LA PAGINA
@@ -86,6 +89,55 @@ $(document).ready(function(){
 		return false;
 	});
 
+	// CARGAR TEMA POR DEFECTO
 
+	var form_tema = localStorage.getItem("form_tema");
+
+	if (form_tema != null && form_tema != "undefined"){
+		switch (form_tema) {
+			case "green":
+				theme.attr("href","css/green.css");
+				break;
+			case "red":
+				theme.attr("href","css/red.css");
+				break;
+			case "blue":
+				theme.attr("href","css/blue.css");
+				break;
+			default:
+				theme.attr("href","css/green.css");
+				break;
+		}	
+	}
+
+
+
+
+	// FORMULARIO DE LOGIN FALSO
+
+	$("#login form").submit(function(){
+		var form_name = $("#form_name").val();
+
+		localStorage.setItem("form_name" ,form_name);
+	});
+
+	var form_name = localStorage.getItem("form_name");
+
+	if (form_name != null && form_name != "undefined"){
+		var about = $("#about p");
+		
+		console.log(form_name);
+		about.html("<strong>Bienvenido " + form_name + "</strong>");	
+		about.append("<a href='#' id='logout'> Cerrar Sesion</a>");
+		$("#login").hide();
+
+		$("#logout").click(function(){
+			localStorage.removeItem("form_name");
+			location.reload();
+		});
+
+	}
+	
+	
 
 });
