@@ -127,6 +127,8 @@ $(document).ready(function(){
 
 	var form_name = localStorage.getItem("form_name");
 
+	// COMPROBAR SI USUARIO ESTA VALIDADO
+
 	if (form_name != null && form_name != "undefined"){
 		var about = $("#about p");
 		
@@ -147,6 +149,32 @@ $(document).ready(function(){
 		$("#acordeon").accordion();
 
 	}
+
+	//PAGINA PARA EL RELOG
+
+	if (window.location.href.indexOf('reloj') > -1){
+
+		setInterval(function(){
+			var relog = moment().format("h:mm:ss");
+			$("#reloj").html(relog);
+		},1000);
+
+		
+	}
+
+	// Validacion del formulario
+	if (window.location.href.indexOf('contact') > -1){
+
+	  $("form input[name='date'").datepicker({
+	  	dateFormat: 'dd-mm-yy'
+	  });	
+
+	  $.validate({
+   		 lang: 'es'
+ 	 });
+
+	}
+
 
 
 });

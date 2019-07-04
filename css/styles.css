@@ -146,7 +146,9 @@ body {
 
 form input[type="text"],
 form input[type="password"],
-form input[type="email"]{
+form input[type="email"],
+form input[type="number"],
+select{
 	padding: 5px;
 	border-radius: 2px;
 	border: 1px solid gray;
@@ -230,3 +232,39 @@ footer {
 #acordeon {
 	margin-top: 20px;
 }
+
+#reloj{
+	font-size: 40px;
+	font-weight: bold;
+	font-family: Helvetica, Arial;
+	color: #333;
+	border: 5px solid #333;
+	width: 30%;
+	padding: 30px;
+	margin: 0px auto;
+}
+
+
+#form_contact{
+	width: 50%;
+	margin-top: 15px;
+	font-family: Helvetica, Arial;
+}
+
+#form_contact label {
+	width: 100%;
+	display: block;
+	margin-top: 5px;
+}
+
+.form-error{
+	float: right;
+    width: 65%;
+    font-size: 11px;
+    background: red;
+    color: white;
+    padding: 10px;
+
+}
+
+   
